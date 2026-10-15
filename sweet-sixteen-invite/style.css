@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    background-color: #fdfdfd;
+    overflow-x: hidden;
+}
+
+/*---- Envelope View ----*/
+#envelope-view {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 48px;
+    height: 100vh;
+    background-image: url('images/border.png');
+    background-color: #ccdae3;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transition: opacity 1s ease;
+}
+
+.crown {
+    width: 60%;
+    max-width: 280px;
+}
+
+.tap-text {
+    color: #0c3261;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.5;}
+}
+
+/*---- invitation view ----*/
+#invitation-view {
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+    url('images/background.jpeg');;
+    background-size: contain;
+}
+
+#invitation-view.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.invitation-card {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0px 20px 40px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    text-align: center;
+    color: #5e5e5e;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/*---- typography ----*/
+
+.header-text {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(1rem, 5vw, 2rem);
+    letter-spacing: 2%;
+    line-height: 100%;
+    margin-bottom: 16px;
+    color: #0c3261;
+}
+
+.body-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(.8rem, 3vw, 1rem);
+
+}
+
+/*---- Graphics ----*/
+.top-roses {
+    transform: scaleY(-1);
+}
+
+.floating-decor {
+    display: inline-grid;
+    grid-template-areas: "stack";
+    place-items: center;
+}
+
+.bg-image, .content {
+    grid-area: stack;
+}
+
+.bg-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.brushstroke {
+    width: 100%;
+}
+
+.brushstroke-text {
+    margin-bottom: 4px;
+}
+
+.decor2 > .content {
+    z-index: 1;
+    padding: 124px;
+}
+
+.decor3 {
+    width: 50%;
+    rotate: -25deg;
+    margin-left: 10%;
+}
+
+.decor3 > .content {
+    z-index: 1;
+    padding: 50% 10% 0px;
+}
+
+.butterflies {
+    position: absolute;
+}
+
+.butterfly1 {
+    width: 27%;
+    left: 5%;
+    top: 45%;
+    rotate: -21deg;
+}
+
+.butterfly2 {
+    width: 40%;
+    right: 5%;
+    bottom: 26%;
+    rotate: 5deg;
+}
+
+.rsvp-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---- scroll fade-in---*/
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: calc(var(--delay, 0) * 200ms);
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rsvp-button {
+    background-color: #0c3261;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.rsvp-button:active {
+    background-color: #ccdae3;
+    color: #0c3261;
+    border: 2px solid #0c3261;
+}
+
+.calendar-button {
+    background-color: #ccdae3;
+    color: #0c3261;
+    border: 2px solid #0c3261;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.calendar-button:active {
+    background-color: #0c3261;
+    color: white;
+}
