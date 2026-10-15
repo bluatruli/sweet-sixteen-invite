@@ -102,6 +102,7 @@ body, html {
 }
 
 .floating-decor {
+    position: relative;
     display: inline-grid;
     grid-template-areas: "stack";
     place-items: center;
@@ -127,7 +128,7 @@ body, html {
 
 .decor2 > .content {
     z-index: 1;
-    padding: 124px;
+    padding: 25%;
 }
 
 .decor3 {
@@ -146,10 +147,10 @@ body, html {
 }
 
 .butterfly1 {
-    width: 27%;
+    width: 22%;
     left: 5%;
-    top: 45%;
-    rotate: -21deg;
+    bottom: -80%;
+    rotate: -45deg;
 }
 
 .butterfly2 {
