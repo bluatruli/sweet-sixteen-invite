@@ -1,77 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>You're Invited ~ Edalyn's Sweet 16</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="envelope-view">
-        <img class="crown" src="images/crown.png"/>
-        <p class="tap-text">Tap to open</p>
+      <img class="crown" src="images/crown.png" />
+      <p class="tap-text">Tap to open</p>
     </div>
 
     <div id="invitation-view" class="hidden">
-        <div class="invitation-card">
-            <img class="top-roses" src="images/roses1.png" alt="roses1">
+      <div class="invitation-card">
+        <img
+          class="top-roses fade-in-on-scroll"
+          src="images/roses1.png"
+          alt="roses1"
+        />
 
-            <img src="images/invite.jpeg" alt="invite">
+        <img class="fade-in-on-scroll" src="images/invite.jpeg" alt="invite" />
 
-            <div class="decor1 floating-decor">
-                <img class="bg-image brushstroke" src="images/brush-stroke1.png" alt="brush-stroke1">
-                <img class="butterfly1 butterflies" src="images/butterfly.png" alt="butterfly">
+        <div class="decor1 floating-decor fade-in-on-scroll">
+          <img
+            class="bg-image brushstroke"
+            src="images/brush-stroke1.png"
+            alt="brush-stroke1"
+          />
+          <img
+            class="butterfly1 butterflies"
+            src="images/butterfly.png"
+            alt="butterfly"
+          />
 
-                <div class="content">
-                    <h1 class="brushstroke-text header-text">Please arrive promptly</h1>
-                    <p class="body-text">Dinner will be served from 5:30PM to 6:30PM</p>                    
-                </div>
-            </div>
-
-            <div class="decor2 floating-decor">
-                <img class="bg-image" src="images/rose-container.png" alt="rose-container">
-                <div class="content">
-                     <h1 class="header-text">Dress Code: Formal Attire Requested</h1>
-                     <p class="body-text">To honor the birthday girl, we kindly ask that guests refrain from wearing baby blue, as this color is reserved for her.</p>
-                </div>
-            </div>
-
-            <img class="butterfly2 butterflies" src="images/butterfly.png" alt="butterfly">
-
-            <div class="decor3 floating-decor">
-                <img class="bg-image" src="images/tag.png" alt="tag">
-                <div class="content">
-                    <h1 class="header-text">Kindly Note</h1>
-                    <p class="body-text">This invitation is intended exclusively for the invited guests.</p>
-                </div>
-            </div>
-
-
-            <div class="decor4 floating-decor">
-                <img class="bg-image brushstroke" src="images/brush-stroke2.png" alt="brush-stroke2">
-                <div class="content">
-                    <h1 class="brushstroke-text body-text rsvp-text">Please RSVP!</h1>
-                    <p class="body-text">Your presence would make this evening more special.</p>                    
-                </div>
-            </div>
-            
-            <div class="action-buttons">
-                <a href="sms:6192478224?body=Hi%20Heidy!%20I'm%20RSVPing%20for%20Edalyn's%20Sweet%20Sixteen!" class="rsvp-button">
-                    RSVP - Heidy (619) 247-8224
-                </a>
-
-                <button id="calendar-btn" class="calendar-button">
-                    🗓️ Save to your calendar
-                </button>
-            </div>
-            
+          <div class="content">
+            <h1 class="brushstroke-text header-text">Please arrive promptly</h1>
+            <p class="body-text">Dinner will be served from 5:30PM to 6:30PM</p>
+          </div>
         </div>
+
+        <div class="decor2 floating-decor fade-in-on-scroll">
+          <img
+            class="bg-image"
+            src="images/rose-container.png"
+            alt="rose-container"
+          />
+          <div class="content">
+            <h1 class="header-text">Dress Code: Formal Attire Requested</h1>
+            <p class="body-text">
+              To honor the birthday girl, we kindly ask that guests refrain from
+              wearing baby blue, as this color is reserved for her.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="butterfly2 butterflies fade-in-on-scroll"
+          src="images/butterfly.png"
+          alt="butterfly"
+        />
+
+        <div class="decor3 floating-decor fade-in-on-scroll">
+          <img class="bg-image" src="images/tag.png" alt="tag" />
+          <div class="content">
+            <h1 class="header-text">Kindly Note</h1>
+            <p class="body-text">
+              This invitation is intended exclusively for the invited guests. We
+              kindly request that you refrain from sharing or forwarding it.
+              Thank you for your understanding.
+            </p>
+          </div>
+        </div>
+
+        <div class="decor4 floating-decor fade-in-on-scroll">
+          <img
+            class="bg-image brushstroke"
+            src="images/brush-stroke2.png"
+            alt="brush-stroke2"
+          />
+          <div class="content">
+            <h1 class="brushstroke-text body-text rsvp-text">Please RSVP!</h1>
+            <p class="body-text">
+              Please respond by Nov 1st. Your presence would make this evening
+              more special.
+            </p>
+          </div>
+        </div>
+
+        <div class="action-buttons fade-in-on-scroll">
+          <a
+            class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfEGNabRQFwZ9O2I7f33Oko1DjQl6sY0fBlbNZaIspLzlCobQ/viewform?usp=publish-editor"
+            target="_blank"
+          >
+            <div class="button-outer">
+              <div class="button-inner">
+                <span>📩&ensp;RSVP Here</span>
+              </div>
+            </div>
+          </a>
+
+          <button id="calendar-btn" class="button calendar-button">
+            <div class="button-outer">
+              <div class="button-inner">
+                <span>🗓️&ensp;Save to Your Calendar</span>
+              </div>
+            </div>
+          </button>
+
+          <a
+            class="button"
+            href="https://www.giftful.com/edalynvega"
+            target="_blank"
+          >
+            <div class="button-outer">
+              <div class="button-inner">
+                <span>🎁&ensp;View Wishlist</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
