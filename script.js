@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cover = document.getElementById("cover");
   const envelopeView = document.getElementById("envelope-view");
   const invitationView = document.getElementById("invitation-view");
+  const bgMusic = document.getElementById("bg-music");
 
   envelopeView.addEventListener("click", () => {
     envelopeView.classList.add("open");
@@ -13,8 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         invitationView.classList.add("visible");
-      }, 50);
-    }, 600);
+
+        if (bgMusic) {
+          bgMusic.play().catch((error) => {
+            console.log("Autoplay failed or blocked by browser:", error);
+          });
+        }
+      }, 600);
+    }, 1500);
   });
 
   const observer = new IntersectionObserver(
@@ -46,10 +53,10 @@ BEGIN:VEVENT
 UID:sweet16-edalynevega@invitation.com
 DTSTAMP:20260101T000000Z
 DTSTART:20261123T010000Z
-DTEND:20261123T050000Z
+DTEND:20261123T070000Z
 SUMMARY:Edalyn's Sweet Sixteen
 LOCATION:636 Broadway\, Chula Vista\, CA 91910
-DESCRIPTION:Sweet Sixteen celebration for Edalyn Rose Vega.\nRSVP by November 1st.\nEdalyn's Wishlist: https://www.giftful.com/edalynvega
+DESCRIPTION:Sweet Sixteen celebration for Edalyn Rose Vega. RSVP by November 1st. Edalyn's Wishlist: https://www.giftful.com/edalynvega
 END:VEVENT
 END:VCALENDAR`;
 

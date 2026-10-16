@@ -93,7 +93,7 @@ html {
   font-size: clamp(1rem, 5vw, 2rem);
   letter-spacing: 2%;
   line-height: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 0.5rem;
   color: #0c3261;
 }
 
@@ -139,7 +139,7 @@ html {
 }
 
 .decor3 {
-  width: 50%;
+  width: 60%;
   rotate: -25deg;
   margin-left: 10%;
 }
@@ -163,7 +163,7 @@ html {
 .butterfly2 {
   width: 40%;
   right: 5%;
-  bottom: 30%;
+  bottom: 33%;
   rotate: 5deg;
 }
 
@@ -281,7 +281,6 @@ html {
   -webkit-user-select: none;
 }
 
-/* Only trigger hover state on devices that actually support mouse hovering */
 @media (hover: hover) and (pointer: fine) {
   .button:hover .button-outer {
     box-shadow: 0 0 0 0 transparent;
@@ -291,7 +290,6 @@ html {
   }
 }
 
-/* Active / Press state strictly while holding click or tap */
 .button:active .button-outer {
   box-shadow: 0 0 0 0 transparent;
 }
@@ -308,7 +306,6 @@ html {
     -0.075em -0.12em 0.2em 0.1em inset rgba(5, 5, 5, 0.25);
 }
 
-/* Kill standard outline & sticky focus styles */
 .button:focus,
 .button:focus-visible,
 .button:focus-within {
